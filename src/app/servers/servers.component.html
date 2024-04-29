@@ -1,0 +1,15 @@
+<label>Server Name</label>
+<input type="text" class="form-control" [(ngModel)]="serverName">
+<input type="text" class="form-control" [(ngModel)]="userName">
+<hr>
+<p>Sever Name: {{ serverName }}</p>
+<p>User Name: {{ userName }} </p>
+<hr>
+<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button>
+<button class="btn btn-primary" [disabled]="userName === ''" (click)="onResetUserName()">Reset Username</button>
+
+<hr>
+<p>{{ serverCreationStatus }} </p>
+<hr>
+<app-server></app-server>
+<app-server></app-server>
